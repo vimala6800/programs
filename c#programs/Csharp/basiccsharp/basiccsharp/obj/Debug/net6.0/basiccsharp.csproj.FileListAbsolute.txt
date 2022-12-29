@@ -1,0 +1,15 @@
+D:\Csharp\basiccsharp\basiccsharp\obj\Debug\net6.0\basiccsharp.csproj.AssemblyReference.cache
+D:\Csharp\basiccsharp\basiccsharp\obj\Debug\net6.0\basiccsharp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Csharp\basiccsharp\basiccsharp\obj\Debug\net6.0\basiccsharp.AssemblyInfoInputs.cache
+D:\Csharp\basiccsharp\basiccsharp\obj\Debug\net6.0\basiccsharp.AssemblyInfo.cs
+D:\Csharp\basiccsharp\basiccsharp\obj\Debug\net6.0\basiccsharp.csproj.CoreCompileInputs.cache
+D:\Csharp\basiccsharp\basiccsharp\bin\Debug\net6.0\basiccsharp.exe
+D:\Csharp\basiccsharp\basiccsharp\bin\Debug\net6.0\basiccsharp.deps.json
+D:\Csharp\basiccsharp\basiccsharp\bin\Debug\net6.0\basiccsharp.runtimeconfig.json
+D:\Csharp\basiccsharp\basiccsharp\bin\Debug\net6.0\basiccsharp.dll
+D:\Csharp\basiccsharp\basiccsharp\bin\Debug\net6.0\basiccsharp.pdb
+D:\Csharp\basiccsharp\basiccsharp\obj\Debug\net6.0\basiccsharp.dll
+D:\Csharp\basiccsharp\basiccsharp\obj\Debug\net6.0\refint\basiccsharp.dll
+D:\Csharp\basiccsharp\basiccsharp\obj\Debug\net6.0\basiccsharp.pdb
+D:\Csharp\basiccsharp\basiccsharp\obj\Debug\net6.0\basiccsharp.genruntimeconfig.cache
+D:\Csharp\basiccsharp\basiccsharp\obj\Debug\net6.0\ref\basiccsharp.dll

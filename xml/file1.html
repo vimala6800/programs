@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document1</title>
+</head>
+<body>
+    <h2>Json Place Holder - Todos</h2>
+<button type="button" onclick="loadDoc()">Get Todos</button>
+<table id="result">
+</table>
+
+<script>
+function loadDoc() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+  //    document.getElementById("demo").innerHTML =
+   //   this.responseText;
+   data = JSON.parse(this.responseText)
+   displayTodos(data);
+    }
+  };
+  xhttp.open("GET", "http://jsonplaceholder.typicode.com/todos");
+  xhttp.send();
+}
+//{ "userId": 1, "id": 1, "title": "delectus aut autem", "completed": false }
+function displayTodos(todos){
+	console.log(todos);
+	
+
+	data = "<tr><th>User Id</th><th>Id</th><th>Title</th><th>Status</th></tr>"
+
+	for (let i=0;i<todos.length;i++){
+		todo = todos[i];
+		data = data+`<tr><td>${todo.userId}</td><td>${todo.id}</td><td>${todo.title}</td><td>${todo.completed}</td></tr>`
+	}
+
+	document.getElementById("result").innerHTML=data;
+
+}
+</script>
+</body>
+</html>

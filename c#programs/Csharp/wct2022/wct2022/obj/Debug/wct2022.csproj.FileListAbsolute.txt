@@ -1,0 +1,6 @@
+D:\Csharp\wct2022\wct2022\obj\Debug\wct2022.csproj.AssemblyReference.cache
+D:\Csharp\wct2022\wct2022\obj\Debug\wct2022.csproj.SuggestedBindingRedirects.cache
+D:\Csharp\wct2022\wct2022\obj\Debug\wct2022.Form1.resources
+D:\Csharp\wct2022\wct2022\obj\Debug\wct2022.Properties.Resources.resources
+D:\Csharp\wct2022\wct2022\obj\Debug\wct2022.csproj.GenerateResource.cache
+D:\Csharp\wct2022\wct2022\obj\Debug\wct2022.csproj.CoreCompileInputs.cache

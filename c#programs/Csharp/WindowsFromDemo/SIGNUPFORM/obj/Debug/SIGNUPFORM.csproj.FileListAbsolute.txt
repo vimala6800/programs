@@ -1,0 +1,11 @@
+D:\Csharp\WindowsFromDemo\SIGNUPFORM\obj\Debug\SIGNUPFORM.csproj.AssemblyReference.cache
+D:\Csharp\WindowsFromDemo\SIGNUPFORM\obj\Debug\SIGNUPFORM.csproj.SuggestedBindingRedirects.cache
+D:\Csharp\WindowsFromDemo\SIGNUPFORM\obj\Debug\SIGNUPFORM.Form1.resources
+D:\Csharp\WindowsFromDemo\SIGNUPFORM\obj\Debug\SIGNUPFORM.Properties.Resources.resources
+D:\Csharp\WindowsFromDemo\SIGNUPFORM\obj\Debug\SIGNUPFORM.csproj.GenerateResource.cache
+D:\Csharp\WindowsFromDemo\SIGNUPFORM\obj\Debug\SIGNUPFORM.csproj.CoreCompileInputs.cache
+D:\Csharp\WindowsFromDemo\SIGNUPFORM\bin\Debug\SIGNUPFORM.exe.config
+D:\Csharp\WindowsFromDemo\SIGNUPFORM\bin\Debug\SIGNUPFORM.exe
+D:\Csharp\WindowsFromDemo\SIGNUPFORM\bin\Debug\SIGNUPFORM.pdb
+D:\Csharp\WindowsFromDemo\SIGNUPFORM\obj\Debug\SIGNUPFORM.exe
+D:\Csharp\WindowsFromDemo\SIGNUPFORM\obj\Debug\SIGNUPFORM.pdb

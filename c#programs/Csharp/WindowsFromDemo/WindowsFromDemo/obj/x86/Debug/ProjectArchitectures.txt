@@ -1,0 +1,1 @@
+D:\Csharp\WindowsFromDemo\WindowsFromDemo\WindowsFromDemo.csproj;x86

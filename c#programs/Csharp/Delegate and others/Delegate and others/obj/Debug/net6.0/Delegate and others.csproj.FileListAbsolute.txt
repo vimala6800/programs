@@ -1,0 +1,15 @@
+D:\Csharp\Delegate and others\Delegate and others\bin\Debug\net6.0\Delegate and others.exe
+D:\Csharp\Delegate and others\Delegate and others\bin\Debug\net6.0\Delegate and others.deps.json
+D:\Csharp\Delegate and others\Delegate and others\bin\Debug\net6.0\Delegate and others.runtimeconfig.json
+D:\Csharp\Delegate and others\Delegate and others\bin\Debug\net6.0\Delegate and others.dll
+D:\Csharp\Delegate and others\Delegate and others\bin\Debug\net6.0\Delegate and others.pdb
+D:\Csharp\Delegate and others\Delegate and others\obj\Debug\net6.0\Delegate and others.csproj.AssemblyReference.cache
+D:\Csharp\Delegate and others\Delegate and others\obj\Debug\net6.0\Delegate and others.GeneratedMSBuildEditorConfig.editorconfig
+D:\Csharp\Delegate and others\Delegate and others\obj\Debug\net6.0\Delegate and others.AssemblyInfoInputs.cache
+D:\Csharp\Delegate and others\Delegate and others\obj\Debug\net6.0\Delegate and others.AssemblyInfo.cs
+D:\Csharp\Delegate and others\Delegate and others\obj\Debug\net6.0\Delegate and others.csproj.CoreCompileInputs.cache
+D:\Csharp\Delegate and others\Delegate and others\obj\Debug\net6.0\Delegate and others.dll
+D:\Csharp\Delegate and others\Delegate and others\obj\Debug\net6.0\refint\Delegate and others.dll
+D:\Csharp\Delegate and others\Delegate and others\obj\Debug\net6.0\Delegate and others.pdb
+D:\Csharp\Delegate and others\Delegate and others\obj\Debug\net6.0\Delegate and others.genruntimeconfig.cache
+D:\Csharp\Delegate and others\Delegate and others\obj\Debug\net6.0\ref\Delegate and others.dll

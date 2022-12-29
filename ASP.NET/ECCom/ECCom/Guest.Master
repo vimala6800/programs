@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Guest.master.cs" Inherits="ECCom.Guest" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Guest</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+         <div class="container">
+            <div class="header">
+                <h1>Ecom</h1>
+                <header>
+                    <a href="Default.aspx">Home</a>
+                    <a href="aboutus.aspx">About us</a>
+                    <a href="products.aspx">Products</a>
+                    <a href="contactus.aspx">Contact us</a>
+                </header>
+            </div>
+            <div class="contact">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+              <br />
+            <br />
+            <footer>
+            Conditions of Use & Sale Privacy Notice Interest-Based Ads<br />
+            © 1996-2022, Amazon.com, Inc. or its affiliates
+            </footer>
+        </div>
+    </form>
+</body>
+</html>

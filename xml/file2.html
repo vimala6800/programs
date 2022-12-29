@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <style>
+        #result
+        {
+            background-color: powderblue;
+            border: 3px solid black;
+           padding: 10px;
+        
+        }
+        header
+        {
+            position:fixed;top:0;width:100%;padding:3px;text-align:center;background-color:rgb(135, 206, 135);font-size:12px;
+
+        }
+        footer
+        {
+        position:fixed;bottom:0;width:100%;padding:3px;text-align:center;background-color:rgb(135, 206, 135);font-size:20px;
+         }
+         button{
+            width:80px;
+            height:30px;
+            margin:60px;
+         }
+    </style>
+    
+<head>
+       <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document2</title>
+</head>
+
+<body>
+    <center>
+         <header><h1>Json Place Holder - users</h1></header>
+
+
+
+<button type="button" onclick="loadDoc()">Getusers</button>
+
+
+<table id="result">
+</table>
+</center>
+<script>
+function loadDoc() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+  
+   data = JSON.parse(this.responseText)
+   displayusers(data);
+    }
+  };
+  xhttp.open("GET", "http://jsonplaceholder.typicode.com/users");
+  xhttp.send();
+}
+
+function displayusers(users){
+	console.log(users);
+	
+
+	data = "<tr><th>User name</th><th>email</th><th>city</th><th>phone</th><th>website</th></tr>"
+
+	for (let i=0;i<users.length;i++){
+		user = users[i];
+		data = data+`<tr><td>${user.name}</td><td>${user.email}</td><td>${user.city}</td><td>${user.phone}</td><td>${user.website}</td></tr>`
+	}
+
+	document.getElementById("result").innerHTML=data;
+
+}
+</script>
+</body>
+<footer>
+    <p>© 2022 Json Place Holder Pvt. Ltd. All Rights Reserved.</p>
+</footer>
+
+</html>

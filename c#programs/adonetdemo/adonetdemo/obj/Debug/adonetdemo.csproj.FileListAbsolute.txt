@@ -1,0 +1,3 @@
+C:\Users\vimala.v\Desktop\training\c#programs\adonetdemo\adonetdemo\obj\Debug\adonetdemo.csproj.AssemblyReference.cache
+C:\Users\vimala.v\Desktop\training\c#programs\adonetdemo\adonetdemo\obj\Debug\adonetdemo.csproj.SuggestedBindingRedirects.cache
+C:\Users\vimala.v\Desktop\training\c#programs\adonetdemo\adonetdemo\obj\Debug\adonetdemo.csproj.CoreCompileInputs.cache

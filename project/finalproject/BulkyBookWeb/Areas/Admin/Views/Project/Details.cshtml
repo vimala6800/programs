@@ -1,0 +1,143 @@
+﻿@model BulkyBook.Models.ViewModels.ProjectDetailVM
+
+
+
+<form method="post" asp-action="Details" enctype="multipart/form-data">
+    <input asp-for="ProjectDetail.Id" hidden />
+    @*<input asp-for="Product.ImageUrl" hidden />*@
+
+
+
+    <div class="row">
+        <div class="col-10">
+            <div class="border p-3 mt-4 row">
+                <div class="col-12 pb-2">
+                    <h2 class="text-primary">@(Model.ProjectDetail.Id != 0 ? "Update" : "Create")  Project Details</h2>
+                    <hr />
+                </div>
+                @*<div asp-validation-summary="All"></div>*@
+                @*<div class="mb-3 col-6">
+                <label asp-for="PDetail.ProjectId">Name</label>
+                <select asp-for="PDetail.ProjectId" asp-items="@Model.ProjectList" class="form-select">
+                <option disabled selected>--Select Project--</option>
+                </select>
+                @*<input asp-for="PDetail.ProjectId"  type="text" class="form-control" />*@
+                @*<span asp-validation-for="PDetail.ProjectId" class="text-danger"></span>
+                </div>*@
+                <div class="mb-3 col-6">
+                    <label asp-for="ProjectDetail.ProjectId">Name</label>
+                    <select asp-for="ProjectDetail.ProjectId" asp-items="@Model.ProjectList" class="form-select">
+                        <option disabled selected>--Select Project--</option>
+                    </select>
+                    @*<input asp-for="PDetail.ProjectId"  type="text" class="form-control" />*@
+                    <span asp-validation-for="ProjectDetail.ProjectId" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-6">
+                    <label asp-for="ProjectDetail.CustomerId">Name</label>
+                    <select asp-for="ProjectDetail.CustomerId" asp-items="@Model.CustomerList" class="form-select">
+                        <option disabled selected>--Select Customer--</option>
+                    </select>
+                    @*<input asp-for="PDetail.ProjectId"  type="text" class="form-control" />*@
+                    <span asp-validation-for="ProjectDetail.CustomerId" class="text-danger"></span>
+                </div>
+                <div class="mb-3 ">
+                    <label asp-for="ProjectDetail.JobTitle"></label>
+                    <input asp-for="ProjectDetail.JobTitle" class="form-control" />
+                    <span asp-validation-for="ProjectDetail.JobTitle" class="text-danger"></span>
+                </div>
+                <div class="mb-3 ">
+                    <label asp-for="ProjectDetail.SkillSet"></label>
+                    <input asp-for="ProjectDetail.SkillSet" class="form-control" />
+                    <span asp-validation-for="ProjectDetail.SkillSet" class="text-danger"></span>
+                </div>
+                <div class="mb-3 ">
+                    <label asp-for="ProjectDetail.Experience"></label>
+                    <input asp-for="ProjectDetail.Experience" class="form-control" />
+                    <span asp-validation-for="ProjectDetail.Experience" class="text-danger"></span>
+                </div>
+                <div class="mb-3 ">
+                    <label asp-for="ProjectDetail.NumberOfMonths"></label>
+                    <input asp-for="ProjectDetail.NumberOfMonths" class="form-control" />
+                    <span asp-validation-for="ProjectDetail.NumberOfMonths" class="text-danger"></span>
+                </div>
+                <div class="mb-3 ">
+                    <label asp-for="ProjectDetail.StartDate"></label>
+                    <input asp-for="ProjectDetail.StartDate" class="form-control" type="date" />
+                    <span asp-validation-for="ProjectDetail.StartDate" class="text-danger"></span>
+                </div>
+                <div class="mb-3 ">
+                    <label asp-for="ProjectDetail.EndDate"></label>
+                    <input asp-for="ProjectDetail.EndDate" class="form-control" type="date" />
+                    <span asp-validation-for="ProjectDetail.EndDate" class="text-danger"></span>
+                </div>
+                <div class="mb-3 ">
+                    <label asp-for="ProjectDetail.NumberOfResources"></label>
+                    <input asp-for="ProjectDetail.NumberOfResources" class="form-control" />
+                    <span asp-validation-for="ProjectDetail.NumberOfResources" class="text-danger"></span>
+                </div>
+
+                <div class="col-12">
+                    @if (Model.ProjectDetail.Id != 0)
+                    {
+                        <button type="submit" class="btn btn-primary" style="width:150px">Update</button>
+                    }
+                    else
+                    {
+                        <button type="submit" onclick="return ValidateInput()" class="btn btn-primary" style="width:150px">Create</button>
+                    }
+                    <a asp-controller="Project" asp-action="Index1" class="btn btn-secondary" style="width:150px">
+                        View Resources
+                    </a>
+                    <a asp-controller="Project" asp-action="Index" class="btn btn-secondary" style="width:150px">
+                        Back to List
+                    </a>
+                </div>
+
+
+
+            </div>
+        </div>
+        @*<div class="col-2 pt-4">
+        <img src="@Model.Product.ImageUrl"
+        width="100%" style="border-radius:5px; border:1px solid #bbb9b9" />
+        </div>*@
+    </div>
+
+
+
+
+
+
+
+
+
+</form>
+
+
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+            toolbar_mode: 'floating',
+        });
+
+
+
+        function ValidateInput() {
+            if (document.getElementById("uploadBox").value == "") {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please upload an Image!',
+                });
+                return false;
+            }
+            return true;
+        }
+    </script>
+}

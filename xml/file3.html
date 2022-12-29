@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo post</title>
+</head>
+<body>
+    <h1>Todos</h1>
+
+	<label>Title</label>
+	<input type="text" name="title" id="title"><br>
+	<button onclick="addTodo()">Add Todo</button>
+	<button onclick="displayTodos()">Display Todos</button>
+	<table id="result"></table>
+	<script type="text/javascript">
+		
+		todos=[]
+		rowcount = 0
+		function addTodo(){
+			title = document.getElementById('title').value;
+
+			console.log('add todo');
+			rowcount= rowcount+1;
+			formdata = {
+				userId:1,
+				id:rowcount,
+				title:title,
+				completed:false
+			}
+
+			fetch('https://jsonplaceholder.typicode.com/todos/',{
+				method:'post',
+				body:JSON.stringify(formdata),
+				headers: {
+        			"Content-type": "application/json; charset=UTF-8"
+        		}
+        		})
+        		.then(response=>response.json())
+				//.then (json=>console.log('json '+json))
+				//.then (json=>todos.push(json))
+				.then (json=>todos.push(formdata))
+				console.log('updated todos '+todos.length)
+				document.getElementById('title').value=''
+			}
+
+			function displayTodos (){
+		data ="<tr><th>User Id</th><th>Id</th><th>Title</th><th>Completed</th></tr>"
+		
+		for (i=0;i<todos.length;i++){
+			
+			todo = todos[i]
+			data = data +"<tr><td>"+todo.userId+"</td><td>"+todo.id+"</td><td>"+todo.title+"</td><td>"+todo.completed+"</td></tr>"
+		}
+		
+		document.getElementById("result").innerHTML=data
+}
+
+			
+	</script>
+
+</body>
+</html>

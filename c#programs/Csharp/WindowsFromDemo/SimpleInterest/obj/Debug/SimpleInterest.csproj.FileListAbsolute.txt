@@ -1,0 +1,11 @@
+D:\Csharp\WindowsFromDemo\SimpleInterest\bin\Debug\SimpleInterest.exe.config
+D:\Csharp\WindowsFromDemo\SimpleInterest\bin\Debug\SimpleInterest.exe
+D:\Csharp\WindowsFromDemo\SimpleInterest\bin\Debug\SimpleInterest.pdb
+D:\Csharp\WindowsFromDemo\SimpleInterest\obj\Debug\SimpleInterest.csproj.AssemblyReference.cache
+D:\Csharp\WindowsFromDemo\SimpleInterest\obj\Debug\SimpleInterest.csproj.SuggestedBindingRedirects.cache
+D:\Csharp\WindowsFromDemo\SimpleInterest\obj\Debug\SimpleInterest.Form1.resources
+D:\Csharp\WindowsFromDemo\SimpleInterest\obj\Debug\SimpleInterest.Properties.Resources.resources
+D:\Csharp\WindowsFromDemo\SimpleInterest\obj\Debug\SimpleInterest.csproj.GenerateResource.cache
+D:\Csharp\WindowsFromDemo\SimpleInterest\obj\Debug\SimpleInterest.csproj.CoreCompileInputs.cache
+D:\Csharp\WindowsFromDemo\SimpleInterest\obj\Debug\SimpleInterest.exe
+D:\Csharp\WindowsFromDemo\SimpleInterest\obj\Debug\SimpleInterest.pdb

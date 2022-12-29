@@ -1,0 +1,64 @@
+﻿
+@model ProjectManager
+
+
+
+<form method="post" asp-action="Delete">
+    <input asp-for="PMId" hidden />
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Delete ProjecrManager</h2>
+            <hr />
+        </div>
+        @*<div asp-validation-summary="All"></div>*@
+        <div class="mb-3">
+            <label asp-for="Email"></label>
+            <input asp-for="Email" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Mobile"></label>
+            <input asp-for="Mobile" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Address"></label>
+            <input asp-for="Address" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="City"></label>
+            <input asp-for="City" disabled class="form-control" />
+        </div>
+         <div class="mb-3">
+            <label asp-for="State"></label>
+            <input asp-for="State" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Pincode"></label>
+            <input asp-for="Pincode" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Password"></label>
+            <input asp-for="Password" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="ConfirmPassword"></label>
+            <input asp-for="ConfirmPassword" disabled class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-danger" style="width:150px">Delete</button>
+        <a asp-controller="ProjectManager" asp-action="Index" class="btn btn-secondary" style="width:150px">
+            Back to List
+        </a>
+    </div>
+</form>
+
+
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+    }

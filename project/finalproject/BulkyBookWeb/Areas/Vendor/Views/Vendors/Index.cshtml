@@ -1,0 +1,165 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<BulkyBook.Models.Project>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<head>
+    <style>
+        .animate-charcter {
+            text-transform: uppercase;
+            background-image: linear-gradient( -225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100% );
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 200% auto;
+            color: #fff;
+            background-clip: text;
+            fill: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 2s linear infinite;
+            display: inline-block;
+            font-size: 50px;
+        }
+
+        .customers {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            .customers td, .customers th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            .customers tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            .customers tr:hover {
+                background-color: #ddd;
+            }
+
+            .customers th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: rgba(255,114,118);
+                color: white;
+            }
+    </style>
+</head>
+
+
+
+
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="animate-charcter">Project List</h2>
+        </div>
+        @*<div class="col-6 text-end">
+        <a asp-controller="Customer" asp-action="Create" class="btn btn-primary">
+        <i class="bi bi-plus-circle"></i> &nbsp; Create New Customer
+        </a>
+        </div>*@
+    </div>
+    <br /><br />
+
+
+
+
+    <div style="overflow-x:auto">
+        <table class="customers" style="width:100%">
+            <thead>
+                <tr>
+                    <th style="color:purple;font-size:125%">
+                        
+                            Customer Name
+                        
+                    </th>
+                    <th style="color:purple;font-size:125%">
+                        <b>
+                            Project Name
+                        </b>
+                    </th>
+                    <th style="color:purple;font-size:125%">
+                        <b>
+                            Description
+                        </b>
+                    </th>
+                    <th style="color:purple;font-size:125%">
+                        <b>
+                            StartDate
+                        </b>
+                    </th>
+                    <th style="color:purple;font-size:125%">
+                        <b>
+                            EndDate
+                        </b>
+                    </th>
+                    <th style="color:purple;font-size:125%">
+                        <b>
+                            Project Manager Name
+                        </b>
+                    </th>
+                    <th style="color:purple;font-size:125%">
+                        <b>
+                            ProposalSubmissionDate
+                        </b>
+                    </th>
+                    <th style="color:purple;font-size:125%">
+                        <b>
+                            Status
+                        </b>
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var obj in Model)
+                {
+                    <tr>
+                        <td width="20%">
+                            @obj.Customer.Name
+                        </td>
+                        <td width="20%">
+                            <a asp-controller="Vendors" asp-action="Details">
+                                @obj.Name
+                            </a>
+                        </td>
+                        <td width="20%">
+                            @obj.Description
+                        </td>
+                        <td width="20%">
+                            @obj.StartDate
+                        </td>
+                        <td width="20%">
+                            @obj.EndDate
+                        </td>
+                        <td width="20%">
+                            @obj.ProjectManager.Name
+                        </td>
+                        <td width="20%">
+                            @obj.ProposalSubmissionDate
+                        </td>
+                        <td width="20%">
+                            @obj.Status
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+
+
+
+
+        </table>
+    </div>
+</div>

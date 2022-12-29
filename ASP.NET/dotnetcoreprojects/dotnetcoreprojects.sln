@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnetcoreprojects", "dotnetcoreprojects\dotnetcoreprojects.csproj", "{70F92186-318C-49F7-BA5C-B548AA088FA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Razerwebpages", "Razerwebpages\Razerwebpages.csproj", "{495E09B5-191B-4C99-A2A1-4B338BD65DC1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70F92186-318C-49F7-BA5C-B548AA088FA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70F92186-318C-49F7-BA5C-B548AA088FA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70F92186-318C-49F7-BA5C-B548AA088FA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70F92186-318C-49F7-BA5C-B548AA088FA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{495E09B5-191B-4C99-A2A1-4B338BD65DC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{495E09B5-191B-4C99-A2A1-4B338BD65DC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{495E09B5-191B-4C99-A2A1-4B338BD65DC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{495E09B5-191B-4C99-A2A1-4B338BD65DC1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3FDF159D-5A17-4F3D-A2B0-52951CBE3C0A}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,11 @@
+D:\Csharp\WindowsFromDemo\Ecom\bin\Debug\Ecom.exe.config
+D:\Csharp\WindowsFromDemo\Ecom\bin\Debug\Ecom.exe
+D:\Csharp\WindowsFromDemo\Ecom\bin\Debug\Ecom.pdb
+D:\Csharp\WindowsFromDemo\Ecom\obj\Debug\Ecom.csproj.AssemblyReference.cache
+D:\Csharp\WindowsFromDemo\Ecom\obj\Debug\Ecom.csproj.SuggestedBindingRedirects.cache
+D:\Csharp\WindowsFromDemo\Ecom\obj\Debug\Ecom.Form1.resources
+D:\Csharp\WindowsFromDemo\Ecom\obj\Debug\Ecom.Properties.Resources.resources
+D:\Csharp\WindowsFromDemo\Ecom\obj\Debug\Ecom.csproj.GenerateResource.cache
+D:\Csharp\WindowsFromDemo\Ecom\obj\Debug\Ecom.csproj.CoreCompileInputs.cache
+D:\Csharp\WindowsFromDemo\Ecom\obj\Debug\Ecom.exe
+D:\Csharp\WindowsFromDemo\Ecom\obj\Debug\Ecom.pdb
