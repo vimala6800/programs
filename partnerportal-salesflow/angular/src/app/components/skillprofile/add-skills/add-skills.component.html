@@ -1,0 +1,33 @@
+<div class="modal fade  custom-modal" id="addSkillset" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">Add Skillset</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <form  [formGroup]="myform" #form="ngForm" (ngSubmit)="addSkill()" >
+
+          <div class="mb-3">
+
+            <label for="skill" class="col-form-label custom-label3">Skillset:</label>
+
+            <input formControlName="skillname" type="text" [(ngModel)]="addSkillRequest.skillName"   class="form-control" name="skillname">
+            <small *ngIf="myform.get('skillname')?.invalid && myform.get('skillname')?.touched" class="text-danger">Skill is required</small>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <!--<button type="button" class="btn btn-primary">Submit</button>-->
+            <button type="button" [disabled]="myform.invalid"  (click)="addSkill()" class="btn btn-primary btnSubmit" data-bs-dismiss="modal" data-bs-toggle="modal"
+                    data-bs-target="skillset">
+              Save
+            </button>
+            </div>
+        </form>
+      </div>
+      </div>
+    </div>
+</div>

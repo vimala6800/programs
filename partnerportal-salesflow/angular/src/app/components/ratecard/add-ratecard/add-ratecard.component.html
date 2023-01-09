@@ -1,0 +1,50 @@
+<div class="modal fade  custom-modal" id="addRatecardset" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">Add RateCard</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <form [formGroup]="myrateform" #form="ngForm">
+         
+          
+          <div class="mb-3">
+
+            <label for="Minyear" class="col-form-label custom-label3">Minimum Year of Experience:</label>
+
+            <input formControlName="minimum" type="text" [(ngModel)]="addRatesRequest.minYrExperience"  required class="form-control" name="minyear">
+            <small *ngIf="myrateform.get('minimum')?.invalid && myrateform.get('minimum')?.touched" class="text-danger">minimum year experience is required</small>
+          </div>
+          
+          <div class="mb-3">
+
+            <label for="maxyear" class="col-form-label custom-label3">Maximum Year of Experience:</label>
+
+            <input formControlName="maximum" type="text" [(ngModel)]="addRatesRequest.maxYrExperience"  required class="form-control" name="maxYear">
+            <small *ngIf="myrateform.get('maximum')?.invalid && myrateform.get('maximum')?.touched" class="text-danger">maximum year experience is required</small>
+          </div>
+          
+          <div class="mb-3">
+
+            <label for="rate" class="col-form-label custom-label3">Rate Per Hour USD:</label>
+
+            <input formControlName="usd" type="text" [(ngModel)]="addRatesRequest.ratePerHrUSD"  required class="form-control" name="skillname">
+            <small *ngIf="myrateform.get('usd')?.invalid && myrateform.get('usd')?.touched" class="text-danger">rate per hour usd is required</small>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <!--<button type="button" class="btn btn-primary">Submit</button>-->
+            <button type="button" [disabled]="myrateform.invalid" (click)="addRatecard()" class="btn btn-primary btnSubmit" data-bs-dismiss="modal" data-bs-toggle="modal"
+                    data-bs-target="skillset">
+              Save
+            </button>
+            </div>
+        </form>
+      </div>
+      </div>
+    </div>
+    </div>
