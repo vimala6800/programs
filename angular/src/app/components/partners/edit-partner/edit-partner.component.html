@@ -1,0 +1,152 @@
+
+<body>
+    <main id="main">
+        <div class="pagetitle"><h1>Edit Partner</h1></div>
+        <section class="section">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="profile-img">
+                                <img [src]="url" class="img-fluid" />
+                                <input class="form-control" type="file" (change)="onSelectFile($event)"  id="formFile">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-4 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <form class="needs-validation" validate #form="ngForm" [formGroup]="myform" (ngSubmit)="updatePartner()">
+                              <div class="row mt-2">
+                                <div class="col-sm-12 col-xl-6">
+                                  <div class="form-floating">
+                                    <input id="intPartnerName" formControlName="name" name="name" type="text" class="form-control" [(ngModel)]="partnerDetails[0].partnerName" placeholder="Partner Name" required />
+                                    <small *ngIf="myform.get('name')?.invalid && myform.get('name')?.touched" class="text-danger">Name is required</small>
+                                    <label for="intPartnerName" class="form-label">Partner Name</label>
+                                  </div>
+                                </div>
+                                <div class="col-sm-12 col-xl-6">
+                                  <div class="form-floating">
+                                    <input id="intLocation" formControlName="location" name="location" type="text" class="form-control" [(ngModel)]="partnerDetails[0].location" placeholder="Location" required />
+                                    <small *ngIf="myform.get('location')?.invalid && myform.get('location')?.touched" class="text-danger">Location is required</small>
+                                    <label for="intLocation" class="form-label">Location</label>
+                                  </div>
+                                </div>
+                                <div class="col-sm-12 col-xl-6">
+                                  <div class="form-floating">
+                                    <select required name="Country"
+                                            formControlName="Country"
+                                            class="form-select" [(ngModel)]="partnerDetails[0].countryID">
+                                      <option *ngFor="let country of countries" name="country"
+                                              [ngValue]="country.countryID" >
+                                        {{country.countryName}}
+                                      </option>
+                                    </select>
+                                    <label for="selCountry" class="form-label">Country</label>
+                                    <small *ngIf="myform.get('Country')?.invalid && myform.get('Country')?.touched" class="text-danger">Country is required</small>
+                                  </div>
+                                </div>
+                                <div class="col-sm-12 col-xl-6">
+                                  <div class="form-floating">
+                                    <input id="intRegisteredDate" formControlName="regdate" name="regdate" type="datetime" class="form-control date" [(ngModel)]="partnerDetails[0].registeredDate" placeholder="Registered Date" required />
+                                    <small *ngIf="myform.get('regdate')?.invalid && myform.get('regdate')?.touched" class="text-danger">Registered Date is required</small>
+                                    <label for="intRegisteredDate" class="form-label">Registered Date</label>
+                                  </div>
+                                </div>
+                                <div class="col-sm-12 col-xl-6">
+                                  <div class="form-floating">
+                                    <input style="color:lightgray" id="intMainContactPerson" formControlName="spocname" name="spocname" readonly type="text" class="form-control" [(ngModel)]="partnerDetails[0].spocName" placeholder="Main Contact Person" required />
+                                    <small *ngIf="myform.get('spocname')?.invalid && myform.get('spocname')?.touched" class="text-danger">SPOC Name is required</small>
+                                    <label for="intMainContactPerson" class="form-label">SPOC Name</label>
+                                  </div>
+                                </div>
+                                <div class="col-sm-12 col-xl-6">
+                                  <div class="form-floating">
+                                    <input id="intMainEmailID" style="color:lightgray" formControlName="spocemail" type="email" readonly class="form-control" name="spocUserID" [(ngModel)]="partnerDetails[0].spocEmail" placeholder="Contact Email ID" required />
+                                    <small *ngIf="myform.get('spocemail')?.invalid && myform.get('spocemail')?.touched" class="text-danger">Email is required</small>
+                                    <label for="intMainEmailID" class="form-label">SPOC Email ID</label>
+                                  </div>
+                                </div>
+                                <div class="col-sm-12 col-xl-6">
+                                  <div class="form-floating">
+                                    <select id="intStatus" class="form-control" formControlName="status" name="status" [(ngModel)]="partnerDetails[0].partnerStatus">
+                                      <option value="1">Active</option>
+                                      <option value="0">Inactive</option>
+                                      <option value="2">Block</option>
+                                    </select>
+                                    <label for="intStatus"  formControlName="status" name="status" class="form-label">Status</label>
+                                    <small *ngIf="myform.get('status')?.invalid && myform.get('status')?.touched" class="text-danger">Status is required</small>
+                                  </div>
+                                </div>
+                                <div class="col-sm-12 col-xl-6">
+                                  <div class="form-floating">
+         
+                                    <select required name="Skill" formControlName="Skill"
+                                            class="form-select" [(ngModel)]="partnerDetails[0].skillID">
+                                     
+                                      <option *ngFor="let skill of skills" name="skill"
+                                              [ngValue]="skill.skillID">
+                                        {{skill.skillName}}
+                                      </option>
+                                    </select>
+                                    <label for="intStatus" class="form-label">Skill Sets</label>
+                                    <small *ngIf="myform.get('Skill')?.invalid && myform.get('Skill')?.touched" class="text-danger">Skill is required</small>
+                                  </div>
+                                </div>
+                                <div class="col-sm-6">
+                                  <h6>Office Address</h6>
+                                  <div class="form-floating">
+                                    <textarea formControlName="address1" name="address1" id="txtAddress1" rows="4" class="form-control" placeholder="Address 1" required [(ngModel)]="partnerDetails[0].address1"></textarea>
+                                    <small *ngIf="myform.get('address1')?.invalid && myform.get('address1')?.touched" class="text-danger">Address is required</small>
+                                    <label for="intAddress" class="form-label">Address 1</label>
+                                  </div>
+                                </div>
+
+                                <!--<div class="col-sm-6">
+      <div class="form-floating">
+          <textarea id="txtAddress2" rows="4" class="form-control" placeholder="Address 2" required></textarea>
+          <label for="txtAddress2" class="form-label">Address 2</label>
+      </div>
+  </div>-->
+                                <div class="col-sm-6">
+                                  <div class="float-start">
+                                    <h6 class="float-left">Billing Address</h6>
+                                  </div>
+                                  <div class="float-end">
+                                    <div class="form-check">
+                                      <input class="form-check-input"   type="checkbox"  (change)="tick()" id="chk" />
+                                      <label class="form-check-label" for="intsameAbove"> Same as Office Address </label>
+                                    </div>
+                                  </div>
+                                  <div class="clearfix"></div>
+                                  <div class="form-floating">
+                                    <textarea id="txtAddress1" formControlName="billingAddress1" rows="4" class="form-control" placeholder="Address 1" required name="billingAddress1" [(ngModel)]="partnerDetails[0].billingAddress1"></textarea>
+                                    <small *ngIf="myform.get('billingAddress1')?.invalid && myform.get('billingAddress1')?.touched" class="text-danger">Billing Address is required</small>
+                                    <label for="intAddress" class="form-label">Address 1</label>
+                                  </div>
+                                </div>
+                              </div>
+                                <div class="col-12 text-end mt-4">
+                                    <button class="btn btn-secondary" type="button" onclick="history.back()">Cancel</button>
+                                    <button class="btn btn-primary" (click)="updatePartner()"  type="button">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    
+    
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/moment.min.js"></script>
+    <script src="./js/daterangepicker.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery.dataTables.min.js"></script>
+    <script src="./js/dataTables.bootstrap5.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/app.js"></script>
+    </body>

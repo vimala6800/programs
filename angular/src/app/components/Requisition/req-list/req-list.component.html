@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fusion</title>
+  <link rel="icon" href="favicon.ico" />
+
+  <style>
+    .dataTables_empty {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header id="header" class="header header-nav fixed-top align-items-center">
+    <nav class="navbar-main">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center justify-content-between">
+          <a class="navbar-brand"><img src="../../../../assets/images/logo2.png" class="img-fluid" /></a>
+          <ul class="d-flex header-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link nav-icon" href="Create_Requisition.html" data-bs-toggle="dropdown"> <i class="bi bi-bell"></i> <span class="badge bg-primary badge-number">4</span> </a>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+                <li class="dropdown-header"> You have 4 new notifications <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li class="notification-item"> <i class="bi bi-exclamation-circle text-warning"></i><div><h4>Lorem Ipsum</h4><p>Quae dolorem earum veritatis oditseno</p><p>30 min. ago</p></div></li>
+                <li><hr class="dropdown-divider"></li>
+                <li class="notification-item"> <i class="bi bi-x-circle text-danger"></i><div><h4>Atque rerum nesciunt</h4><p>Quae dolorem earum veritatis oditseno</p><p>1 hr. ago</p></div></li>
+                <li><hr class="dropdown-divider"></li>
+                <li class="notification-item"> <i class="bi bi-check-circle text-success"></i><div><h4>Sit rerum fuga</h4><p>Quae dolorem earum veritatis oditseno</p><p>2 hrs. ago</p></div></li>
+                <li><hr class="dropdown-divider"></li>
+                <li class="notification-item"> <i class="bi bi-info-circle text-primary"></i><div><h4>Dicta reprehenderit</h4><p>Quae dolorem earum veritatis oditseno</p><p>4 hrs. ago</p></div></li>
+                <li><hr class="dropdown-divider"></li>
+                <li class="dropdown-footer"> <a href="#">Show all notifications</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown pe-3">
+              <a class="nav-link nav-icon nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                <i class="bi bi-person-circle"></i> <span class="d-none d-md-block dropdown-toggle ps-2">Sweekrit P</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                <li class="dropdown-header"><h6>Sweekrit P</h6> <span>Manager - Business Development</span></li>
+                <li><hr class="dropdown-divider"></li>
+                <li> <a class="dropdown-item d-flex align-items-center" href="/profile"> <i class="bi bi-person"></i> <span>My Profile</span> </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li> <a class="dropdown-item d-flex align-items-center" href="index.html"> <i class="bi bi-box-arrow-right"></i> <span>Sign Out</span> </a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar navbar-dark navbar-expand-lg">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="Dashboard_Sales.html"><i class="bi bi-speedometer"></i></a>
+            </li>
+            <li class="nav-item">
+              <!--<a class="nav-link" href="advance-search_Sales.html">Advanced Search</a>-->
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/requisitions">Requisition</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/skills-list">Skills/Profile</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="pagetitle">
+      <div class="row">
+        <div class="col-sm-6"><h1>Requisition</h1></div>
+        <div class="col-sm-6 text-end">
+          <a routerLink="addrequisitions" class="btn btn-primary btn-sm">Add Requisition</a>
+        </div>
+      </div>
+    </div>
+    <div class="pagetitle"><h1></h1></div>
+    <section class="section">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card">
+            <div class="card-body">
+
+              <div class="divFilter_bg">
+                <div class="row">
+                  <div class="col-sm-2 col-md-2">
+                    <div class="form-floating">
+                      <input type="text" class="form-control dateFiller" id="intRequisitiondate" placeholder="Requisition date" />
+                      <label for="intRequisitiondate" class="form-label">Requisition date</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-2 col-md-2">
+                    <div class="form-floating">
+                      <select class="form-select" [(ngModel)]="selectedStatus" id="selStatus">
+                        <option value="-1">select </option>
+                        <option value="0">Open</option>
+                        <option value="1">Closed</option>
+                      </select>
+                      <label for="selStatus">Status</label>
+                    </div>
+
+                  </div>
+                  <div class="col-sm-2 col-md-2">
+                    <div class="form-floating">
+                      <select class="form-select" id="selLocation">
+                        <option value="">Select</option>
+                        <option>Bangalore Karnataka</option>
+                        <option>Us</option>
+                        <option>UK</option>
+                      </select>
+                      <label for="selLocation">Location</label>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-sm-12 col-md-6"><div class="dataTables_length" id="example_length"><label>Show <select name="example_length" [(ngModel)]="noOfRows" aria-controls="example" class="form-select form-select-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div>
+              <div class="col-sm-12 col-md-12"><div id="example_filter" class="dataTables_filter"><label>Search:<input type="text" [(ngModel)]="searchText" class="form-control form-control-sm" placeholder="" aria-controls="example"></label></div></div>
+
+            </div>
+
+
+            <div class="main-table" *ngFor="let list of lists | filter:searchText | paginate:{itemsPerPage:noOfRows,currentPage:page,totalItems:totalLength}; index as i" [ngClass]="{ 'active': selectedList == list } ">
+              <div>
+                <div id="accordion" class="accordion mt-2 custom-accordian">
+                  <div *ngIf="selectedStatus==-1||list.requisitionStatus == selectedStatus  " class="card">
+                    <div class="card">
+                      <div class="card-header campaign" campaign="5" id="headingOne">
+                        <div class="row">
+                          <!--<div class="col">
+                                <label class="col-form-label">Req #</label><br />
+                                    <label><a [routerLink]="['details',list.requisitionID]">{{list.requisitionCode}}</a></label>
+                             </div>-->
+                          <div class="col">
+
+
+                            <label class="col-form-label">Potential ID</label><br />
+                            <label><a [routerLink]="['details',list.requisitionID]">{{list.potentialNumber}}</a></label>
+                          </div>
+                          <div class="col">
+                            <label class="col-form-label">Requisition Date</label><br />
+                            {{list.requisitionDate | date:'dd/MM/yyyy'}}
+                          </div>
+                          <div class="col">
+                            <label class="col-form-label">Client</label><br />
+                            <label>{{list.clientName}}</label>
+                          </div>
+                          <div class="col">
+                            <label class="col-form-label">Project Type</label><br />
+                            {{list.projectType}}
+                          </div>
+                          <div class="col">
+                            <label class="col-form-label">Status</label><br />
+                            {{list.requisitionStatus === 0 ? 'Open' : 'Closed'}}
+                          </div>
+                         <!-- <div class="col">
+                            <label class="col-form-label">	Action</label>
+                            <label id="lblProjectType" class="form-control-plaintext  pb-0">
+                              <a [routerLink]="['/editreq',list.requisitionID]" class="me-3" data-bs-toggle="tooltip" title="" data-bs-original-title="Edit" aria-label="Edit"><i class="bi bi-pencil-square" data-bs-toggle="tooltip" title="" data-bs-original-title="Edit" aria-label="Edit"></i></a>
+                              <button id="listOptions" class="btn btn-default float-end" title="List Options..."
+                                      (click)="downloadFile(list.requisitionID)">
+                                <i data-bs-toggle="tooltip" title="" class="bi bi-cloud-download-fill" data-bs-original-title="Download" aria-label="Download"></i>
+                              </button>
+                            </label>
+                          </div>-->
+                          <a class="toggleDetails collapsed" data-bs-toggle="collapse" data-bs-target="#accordian0"><span data-bs-toggle="tooltip" title="Details" aria-expanded="false" aria-controls="collapseOne"></span></a>
+                        </div>
+                      </div>
+                      <div id="accordian0" class="collapse" aria-labelledby="headingOne" data-parent="#accordion" style="">
+                        <div class="card-body">
+                          <div class="col-sm-12 col-md-6"><div class="dataTables_length" id="example_length"><label>Show <select name="example_length" [(ngModel)]="noOfRows" aria-controls="example" class="form-select form-select-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div>
+                          <div class="col-sm-12 col-md-12"><div id="example_filter" class="dataTables_filter"><label>Search:<input type="text" [(ngModel)]="searchtext" class="form-control form-control-sm" placeholder="" aria-controls="example"></label></div></div>
+
+
+                          <table id="example" class="table" style="width:100%">
+                            <thead>
+                              <tr>
+                                <th>Partner Name</th>
+                                <th>Resource Name</th>
+                                <th>Interview Level</th>
+                                <th>Interview Date</th>
+                                <th>Applicant Status</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Sight Spectrum</td>
+                                <td>Srikanth Sherigar</td>
+                                <td>Round 1</td>
+                                <td>01/11/2022</td>
+                                <td>Rejected</td>
+                              </tr>
+                              <tr>
+                                <td>Bacany</td>
+                                <td>Tharun Shetty</td>
+                                <td>Round 2</td>
+                                <td>01/11/2022</td>
+                                <td>Tech Interview II - Scheduled</td>
+                              </tr>
+                              <tr>
+                                <td>Sowedane</td>
+                                <td>Kaveri</td>
+                                <td>Round 1</td>
+                                <td>01/11/2022</td>
+                                <td>Tech Interview II - Scheduled</td>
+                              </tr>
+                              <tr>
+                                <td>Bacany</td>
+                                <td>Arun S</td>
+                                <td>Round 1</td>
+                                <td>01/11/2022</td>
+                                <td>Tech Interview II - Scheduled</td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                          <!--<thead>
+                            <tr>
+                              <th>Partner Name</th>
+                              <th>Resource Name</th>
+                              <th>Interview Level</th>
+                              <th>Interview Date</th>
+                              <th>Applicant Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let Partner of getPatner">
+                              <td>{{Partner.partnerName}}</td></tr>
+                            <tr *ngFor="let Manager of getProjectManager">
+                              <td>{{Manager.projectManagerName}}</td>
+                            </tr>
+
+
+
+
+                          </tbody>-->
+
+                          <div class="row">
+
+
+
+                            <div class="col-sm-12 col-md-5"><div class="dataTables_info" id="example_info" role="status" aria-live="polite">Showing 1 to 4 of 4 entries</div></div>
+
+                            <div class="col-sm-12 col-md-7">
+
+                              <div class="dataTables_paginate paging_simple_numbers" id="example_paginate">
+
+
+                                <ul class="pagination">
+
+                                  <pagination-controls (pageChange)="page=$event"></pagination-controls>
+
+                                </ul>
+
+                              </div>
+
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-5"><div class="dataTables_info" id="example_info" role="status" aria-live="polite">Showing 0 to 0 of 0 entries</div></div>
+            <div class="col-sm-12 col-md-7">
+              <div class="dataTables_paginate paging_simple_numbers" id="example_paginate">
+                <ul class="pagination">
+                  <pagination-controls (pageChange)="page=$event"></pagination-controls>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+  <footer>
+    <div class="copyright">
+      © 2022 Flatworld Edge All Rights Reserved.
+    </div>
+  </footer>
+  <script src="./js/jquery-3.5.1.js"></script>
+  <script src="./js/moment.min.js"></script>
+  <script src="./js/daterangepicker.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/jquery.dataTables.min.js"></script>
+  <script src="./js/dataTables.bootstrap5.min.js"></script>
+  <script src="js/select2.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

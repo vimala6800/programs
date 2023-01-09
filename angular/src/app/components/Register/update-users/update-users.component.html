@@ -1,0 +1,31 @@
+<div class="container my-5">
+  <h1 class="mb-3">Edit Users</h1>
+  <div class="row">
+    <div class="col-6">
+      <form #form="ngForm" (ngSubmit)="updateuser()">
+        <div class="mb-3">
+          <label for="name" class="form-label">ID</label>
+          <input type="text" class="form-control" id="id" readonly name="id" [(ngModel)]="getUserRequest.id">
+        </div>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="userName" name="userName" [(ngModel)]="getUserRequest.userName">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" [(ngModel)]="getUserRequest.email">
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone</label>
+          <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" [(ngModel)]="getUserRequest.phoneNumber">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="history.back()">Cancel</button>
+          <button class="btn btn-primary btnSubmit" data-bs-toggle="modal" data-bs-target="">
+            Save
+          </button>
+          <button type="button" class="btn btn-danger" (click)="deleteuser(getUserRequest.id)">Delete</button>
+        </div>
+      </form>
+    </div>
+  </div>
